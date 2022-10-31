@@ -15,4 +15,4 @@ router.delete('/deleteUser/:id', deleteUser)
 // rooms routes
 
 
-module.exports = router;
+module.exports = router; 
