@@ -7,7 +7,7 @@ dotenv.config()
 
 app.use(express.json())
 
-mongoose.connect( process.env.CONNECTION, {useNewUrlParser : true})
+mongoose.connect( process.env.CONNECTION)
 .then(()=>console.log('MongoDB is connected'))
 .catch(err => console.log(err));
 

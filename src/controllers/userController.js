@@ -22,11 +22,11 @@ const getUser = async function(req,res) {
 
         let userId = req.params.id
         let getData = await userModel.findById(userId)
-        return res.status(400).send({status: false, data : getData})
+        return res.status(200).send({status:true, data : getData})
 
     } catch(err) {
         console.log(err);
-        return res.status(201).send({status:false, message: err.message})
+        return res.status(500).send({status:false, message: err.message})
     }
 }
 
@@ -36,7 +36,7 @@ const updateUser = async function(req,res) {
         let userId = req.params.id
         let data = req.body
         let updatedUser = await userModel.findOneAndUpdate({_id : userId}, data, {new : true})
-        return res.status(400).send({status:true, data : updatedUser})
+        return res.status(200).send({status:true, data : updatedUser})
 
     } catch (err) {
         console.log(err);
@@ -48,11 +48,11 @@ const deleteUser = async function(req,res) {
     try{
         let userId = req.params.id
         let userDelete = await userModel.findOneAndUpdate({_id : userId}, {isDeleted : true}, {new : true})
-        return res.status(400).send({status:true, message : "your account has been deleted successfully"})
+        return res.status(200).send({status:true, message : "your account has been deleted successfully"})
 
     } catch(err) {
         console.log(err);
-        return res.status(400).send({status: false, message : err.message})
+        return res.status(500).send({status: false, message : err.message})
     }
 }
 
