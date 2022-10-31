@@ -17,6 +17,38 @@ const createUser = async function(req, res) {
 
 }
 
+
+
+
+
+const loginUser = async function (req, res) {
+    try {
+        let { email, password } = req.body;
+
+        let user = await authorModel.findOne({ email: email, password: password });
+        if (!user) {
+            return res.status(400).send({ status: false, msg: "email or password is incorrect " })
+        }
+
+        let token = jwt.sign(
+            {
+                authorId: user._id.toString(),
+                batch: "radon",
+                organisation: "functionUp"
+            },
+            "WaJaiDhi-radon",
+            {expiresIn:"72h"}
+        )
+
+        res.setHeader("x-api-key", token)
+        
+        return res.status(200).send({ status: true, data: token, msg: "you are successfully loggedin" })
+    } catch (err) {
+        return res.status(500).send({ status: false, msg: err.message })
+    }
+}
+
+
 const getUser = async function(req,res) {
     try {
 
@@ -57,4 +89,4 @@ const deleteUser = async function(req,res) {
 }
 
 
-module.exports = {createUser, getUser, updateUser, deleteUser }
+module.exports = {createUser, loginUser, getUser, updateUser, deleteUser }
