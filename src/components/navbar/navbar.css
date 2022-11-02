@@ -1,0 +1,40 @@
+/*
+navbar krke ek class hai sabse top pr usko pakad ke edit kiya hai div
+navcontainer clas pakda div
+logo span pakda
+navbutton pakda div
+
+*/
+
+.navbar{ 
+    height : 50px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navContainer{
+    width: 100%;
+    max-width: 1024px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo{
+    font-weight: 500;
+}
+
+.navButton{
+    margin-left: 20px;
+    margin-top: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    background-color: green;
+}
