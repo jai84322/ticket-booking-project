@@ -6,7 +6,9 @@ const Navbar = () => {
         <div className="navContainer">
             <span className="logo">Ticket Booking Application</span>
             <div className="navItems"> 
-                <button className="navButton">Register</button>
+                <button className="navButton">
+                  <a href="userRegistration"> Register </a>
+                </button>
                 <button className="navButton">Login</button>
             </div>
         </div>
@@ -14,4 +16,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;
