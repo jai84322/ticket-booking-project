@@ -3,12 +3,16 @@ import { faHotel, faPlane, faCar, faTaxi, faBed, faCalendarDays, faPerson } from
 import './header.css'
 import { DateRange } from 'react-date-range';
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom"
 import {format} from "date-fns"
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 
 
 const Header = () => {
+
+    let navigate = useNavigate();
+
     const [openDate, setOpenDate ] = useState(false)
     const [dates, setDates] = useState([
         {
@@ -51,7 +55,7 @@ const Header = () => {
         </div>
         <h1 className="headerTitle">A lifetime of discounts ? It's Genius</h1>
         <p className="headerDesc">Get rewarded for your travels unlock instant savings of 10% with free account creation</p>
-        <button className="headerBtn">Sign in / Register</button>
+        <button className="headerBtn" onClick={() => {navigate('/signup')}}>Sign up / Register</button>
         <div className="headerSearch">
 
             <div className="headerSearchItem">
@@ -75,11 +79,42 @@ const Header = () => {
             <div className="headerSearchItem">
             <FontAwesomeIcon icon= {faPerson} className="headerIcon"/>
             <span className="headerSearchText">{`${options.adult} adult  ${options.children} children  ${options.room} room`}</span>
-            <div className="options"></div>
+            <div className="options">
+                <div className="optionItem">
+                    <span className="optionText"> Adult  </span>
+                    <div className="optionCounter">
+                    {/* onClick={() => handleOption("adult","d")} */}
+                    {/* onClick={() => handleOption("adult","i")} */}
+                        <button className="optionCounterButton"  > - </button>
+                        <span className="optionCounterNumber">1</span>
+                        <button className="optionCounterButton"  > + </button>
+                    </div>
+                   
+                </div>
+
+                <div className="optionItem">
+                    <span className="optionText"> Children </span>
+                    <div className="optionCounter">
+                        <button className="optionCounterButton"> - </button>
+                        <span className="optionCounterNumber">0</span>
+                        <button className="optionCounterButton"> + </button>
+                    
+                </div>
+                </div>
+
+                <div className="optionItem">
+                    <span className="optionText"> Room  </span>
+                    <div className="optionCounter">
+                        <button className="optionCounterButton"> - </button>
+                        <span className="optionCounterNumber">1</span>
+                        <button className="optionCounterButton"> + </button>
+                </div>
+                </div>
+            </div>
             </div>
 
             <div className="headerSearchItem">
-            <button className="headerBtn">Search</button>
+            <button className="headerBtn">Search</button> 
             </div>
 
         </div>
