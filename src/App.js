@@ -5,6 +5,7 @@ import List from "./pages/list/List" // list of hotels
 import Login from "./pages/login/Login"
 import Signup from "./pages/signup/Signup"
 import Profile from "./pages/profile/Profile"
+import Main from "./pages/main/Main"
 import About from "./pages/about/About"
 import ErrorPage from "./pages/errorpage/ErrorPage"
 
@@ -25,9 +26,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/hotels" element={<List/>}/>
+      <Route path="/main" element={<Main/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
-      <Route path="/profile/" element={<Profile/>}/>
+      <Route path="/profile" element={<Profile/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/hotels/:id" element={<Hotel/>}/>
       <Route path="*" element={<ErrorPage/>}/>

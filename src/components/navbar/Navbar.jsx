@@ -1,7 +1,7 @@
 import "./navbar.css"
 import { useNavigate } from "react-router-dom"
 
-const Navbar = () => {
+const Navbar = ({type}) => {
 
   let navigate = useNavigate();
 
@@ -10,8 +10,10 @@ const Navbar = () => {
         <div className="navContainer">
             <span className="logo">Ticket Booking Application</span>
             <div className="navItems"> 
-                <button className="navButton" onClick={() => {navigate('/signup')}}>Register</button>
-                <button className="navButton" onClick={() => {navigate('/login')}}>Login</button>
+            { type !== "main" &&  <button className="navButton" onClick={() => {navigate('/signup')}}>Register</button> }
+            { type !== "main" &&  <button className="navButton" onClick={() => {navigate('/login')}}>Login</button>}
+            { type === "main" &&  <button className="navButton" onClick={() => {navigate('/profile')}}>Profile</button>}
+            { type === "main" &&  <button className="navButton" onClick={() => {navigate('/')}}>Logout</button>}
             </div>
         </div>
         </div>

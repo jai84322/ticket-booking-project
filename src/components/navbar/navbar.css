@@ -32,6 +32,7 @@ navbutton pakda div
     margin-left: 20px;
     margin-top: 10px;
     border: none;
+    border-radius: 5px;
     padding: 10px 20px;
     font-weight: 500;
     cursor: pointer;
