@@ -8,6 +8,7 @@ import Profile from "./pages/profile/Profile"
 import Main from "./pages/main/Main"
 import About from "./pages/about/About"
 import ErrorPage from "./pages/errorpage/ErrorPage"
+import Checkout from './pages/checkout/Checkout'
 
 // creating routes = Home, list(hotels), hotel(specific)
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/hotels/:id" element={<Hotel/>}/>
+      <Route path="/hotels/:id/checkout" element={<Checkout/>}/>
       <Route path="*" element={<ErrorPage/>}/>
     </Routes>
 

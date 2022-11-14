@@ -21,3 +21,14 @@
     color: black;
     cursor: pointer;
   }
+
+  .fText>a{
+    color: rgb(237, 70, 70);
+    font-size: 15px ;
+    
+  }
+
+  .fText>a:hover{
+    color: rgb(24, 42, 242);
+    
+  }

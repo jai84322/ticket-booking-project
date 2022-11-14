@@ -44,7 +44,8 @@ const Footer = () => {
           <li className="fListItem">Terms & conditions</li>
         </ul>
       </div>
-      <div className="fText">Copyright © 2022 ticket-booking-project.</div>
+      <div className="fText">Copyright ©2022 created by <a target = "_blank" href="https://www.linkedin.com/in/ik0"> <b> IBRAHIM KHAN </b> </a> and <a target = "_blank" href="https://www.linkedin.com/in/jai-sharma-4b776a181"> <b> JAI SHARMA </b> </a> </div>
+      
     </div>
   );
 };
