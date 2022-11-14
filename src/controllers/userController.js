@@ -1,11 +1,15 @@
 const userModel = require('../models/userModel')
+const jwt = require('jsonwebtoken')
+
 
 
 
 const createUser = async function(req, res) {
 
-   try {
-
+    
+    try {
+        // res.setHeader('Access-Control-Allow-Origin','*')
+        
     let data = req.body;
     let savedUser = await userModel.create(data)
     return res.status(201).send({status:true, data: savedUser})
@@ -23,9 +27,10 @@ const createUser = async function(req, res) {
 
 const loginUser = async function (req, res) {
     try {
+        // res.setHeader('Access-Control-Allow-Origin','*')
         let { email, password } = req.body;
 
-        let user = await authorModel.findOne({ email: email, password: password });
+        let user = await userModel.findOne({ email: email, password: password });
         if (!user) {
             return res.status(400).send({ status: false, msg: "email or password is incorrect " })
         }
