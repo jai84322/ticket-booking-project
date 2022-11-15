@@ -16,8 +16,13 @@
 .pListImg{
   width: 100%;
   height: 150px;
+  transition: transform .7s;
   object-fit: cover;
 }
+
+.pListImg:hover {
+  transform: scale(1.1); 
+} 
 
 .pListTitles>h1{
   font-size: 18px;
