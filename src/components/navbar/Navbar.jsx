@@ -8,7 +8,7 @@ const Navbar = ({type}) => {
   return (
        <div className="navbar">
         <div className="navContainer">
-            <span className="logo">Ticket Booking Application</span>
+            <span className="logo">Tourist Solutions</span>
             <div className="navItems"> 
             { type !== "main" &&  <button className="navButton" onClick={() => {navigate('/signup')}}>Register</button> }
             { type !== "main" &&  <button className="navButton" onClick={() => {navigate('/login')}}>Login</button>}
