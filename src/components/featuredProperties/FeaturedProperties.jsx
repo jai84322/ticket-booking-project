@@ -1,4 +1,4 @@
-import useFetch from "../../hooks/useFetch";
+
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {

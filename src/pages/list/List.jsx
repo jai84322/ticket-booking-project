@@ -10,11 +10,15 @@ import SearchItem from "../../components/searchItem/SearchItem";
 
 const List = () => {
   const location = useLocation();
+  // eslint-disable-next-line
   const [destination, setDestination] = useState(location.state.destination);
   const [dates, setDates] = useState(location.state.dates);
   const [openDate, setOpenDate] = useState(false);
+  // eslint-disable-next-line
   const [options, setOptions] = useState(location.state.options);
+  // eslint-disable-next-line
   const [min, setMin] = useState(undefined);
+  // eslint-disable-next-line
   const [max, setMax] = useState(undefined);
 
   // const { data, loading, error, reFetch } = useFetch(

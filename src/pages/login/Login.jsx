@@ -166,7 +166,7 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			const url = "https://tourists-solutions-backend.up.railway.app/loginUser";
-			const { data: res } = await axios.post(url, data);
+			await axios.post(url, data);
 			window.alert("you are logged in")
 			navigate('/main')
 

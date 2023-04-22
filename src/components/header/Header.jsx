@@ -2,7 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faHotel, faPlane, faCar, faTaxi, faBed, faCalendarDays, faPerson } from '@fortawesome/free-solid-svg-icons'
 import './header.css'
 import { DateRange } from 'react-date-range';
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import {format} from "date-fns"
 import 'react-date-range/dist/styles.css'; // main style file
