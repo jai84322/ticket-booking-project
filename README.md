@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 then component bnanya navbar usko home page me use krre hai 
 
 
+1) tickbooks.netlify.com
+2) 
 
 
 
